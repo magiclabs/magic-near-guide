@@ -92,6 +92,7 @@ export default function Profile() {
     const receipt = await near.connection.provider.sendTransaction(signedTransaction);
     console.log(receipt);
     setTxHash(receipt.transaction.hash);
+    fetchBalance(userMetadata.publicAddress);
     setDestinationAddress("");
     setSendAmount("");
     setSendingTransaction(false);
@@ -108,7 +109,7 @@ export default function Profile() {
 
   return userMetadata ? <>
       <div className="container">
-        <h1>Current user: {userMetadata.email}</h1>
+        <h1>Current user: {userMetadata.email || userMetadata.phoneNumber}</h1>
         <button onClick={logout}>Logout</button>
       </div>
       <div className="container">
