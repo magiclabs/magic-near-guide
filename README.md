@@ -25,7 +25,7 @@ The native token for the blockchain is NEAR, which is used to pay for all transa
 ## Get Testnet Tokens
 
 1. Create a test wallet on [wallet.testnet.near.org](https://wallet.testnet.near.org). 200 NEAR test tokens will automatically be deposited to your wallet.
-2. Login to your Magic-NEAR app with email, facebook, or phone number to get your public address.
+2. Login to your Magic-NEAR app with email, google, or phone number to get your public address.
 3. Transfer funds from your `your-account.testnet` wallet on wallet.testnet.near.org to your Magic wallet.
 
 ## Tutorial
@@ -89,14 +89,14 @@ const loginWithSMS = useCallback(async () => {
 }, [phoneNumber]);
  ```
 
-Lastly, Magic also supports social providers, such as Facebook. This function takes two parameters, first being the social provider (facebook, google, apple, etc) and second being a callback URL for where the user should get directed to on your application after authenticating with the social provider and Magic.
+Lastly, Magic also supports social providers, such as Google. This function takes two parameters, first being the social provider (facebook, google, apple, etc) and second being a callback URL for where the user should get directed to on your application after authenticating with the social provider and Magic.
 
 ```js
 // Login.js
-const handleLoginWithFacebook = async (e) => {
+const handleLoginWithGoogle = async (e) => {
   e.preventDefault();
   await magic.oauth.loginWithRedirect({
-    provider: "facebook",
+    provider: "google",
     redirectURI: `${window.location.origin}/callback`
   });
 };

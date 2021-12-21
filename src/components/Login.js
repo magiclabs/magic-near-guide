@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { useHistory } from "react-router";
 import { magic } from "../magic";
-import facebook from "../facebook.png";
+import google from "../google.svg";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -36,11 +36,11 @@ export default function Login() {
     }
   }, [phoneNumber, history]);
 
-  const handleLoginWithFacebook = async (e) => {
+  const handleLoginWithGoogle = async (e) => {
     e.preventDefault();
     setIsLoggingIn(true);
     await magic.oauth.loginWithRedirect({
-      provider: "facebook",
+      provider: "google",
       redirectURI: `${window.location.origin}/callback`
     });
   };
@@ -70,10 +70,10 @@ export default function Login() {
       <button onClick={loginWithEmail} disabled={isLoggingIn}>Send</button>
       <div>or</div><br />
       <img
-        src={facebook}
-        height={40}
-        alt="login with facebook"
-        onClick={handleLoginWithFacebook}
+        src={google}
+        height={50}
+        alt="login with google"
+        onClick={handleLoginWithGoogle}
         disabled={isLoggingIn}
       />
       <input
