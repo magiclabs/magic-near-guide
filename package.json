@@ -9,9 +9,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@magic-ext/near": "^0.1.0",
-    "@magic-ext/oauth": "^1.0.0",
-    "magic-sdk": "^6.2.0",
+    "@magic-ext/near": "^14.0.0",
+    "@magic-ext/oauth": "^13.0.0",
+    "magic-sdk": "^19.0.0",
     "near-api-js": "^0.44.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
