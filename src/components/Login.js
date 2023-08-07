@@ -17,7 +17,7 @@ export default function Login() {
     setIsLoggingIn(true);
 
     try {
-      await magic.auth.loginWithMagicLink({ email });
+      await magic.auth.loginWithEmailOTP({ email });
       history.push("/");
     } catch (err) {
       console.log(err);
